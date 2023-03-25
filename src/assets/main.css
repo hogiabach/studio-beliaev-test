@@ -1,38 +1,37 @@
-@import './base.css';
 html {
   font-size: 16px;
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #353638;
+  display: flex;
+  place-items: center;
+}
+
 #app {
-  max-width: 1280px;
+  display: grid;
   margin: 0 auto;
-  padding: 2rem;
-
+  padding: 77px 46px;
   font-weight: normal;
+  gap: 45px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
+@media (max-width: 1024px) {
   #app {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
   }
 }
